@@ -14,7 +14,7 @@ func experienceOfTeam(team currentTeam: [String]) -> (experienced: Int, inexperi
     var countInexperienced = 0    //used to count how many inexperienced people are on the team
     var playerInfo = [String]()   //used to store the array from players dictionary
     
-    // Loop through all of the players on the team already to determine how many are experienced 
+    // Loop through all of the players on the team already to determine how many are experienced
     
     for player in currentTeam
     {
@@ -109,7 +109,7 @@ for eachPlayer in players
     else if teamDragons.count < players.count / 3
     {
         var teamExperience = experienceOfTeam(team: teamDragons)
-    
+        
         if teamExperience.0 != players.count / 3 / 2 || teamExperience.1 != players.count / 3 / 2
         {
             teamDragons.append(eachPlayer.0)
@@ -117,7 +117,7 @@ for eachPlayer in players
     }
     else
     {
-        teamDragons.append(eachPlayer.0)
+        teamRaptors.append(eachPlayer.0)
     }
 }
 
@@ -149,9 +149,3 @@ for mail in letters
 {
     print(mail)
 }
-
-
-
-
-
-
